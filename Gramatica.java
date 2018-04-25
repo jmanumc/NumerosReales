@@ -22,7 +22,7 @@ public class Gramatica {
 	@Override
 	public String toString() {
 		if (valor.isEmpty()) {
-			return clave + "::" + IGUAL;
+			return clave + PUNTOS + IGUAL;
 		} else {
 			return valor;
 		}
