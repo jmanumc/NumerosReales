@@ -1,6 +1,6 @@
 public class NumerosReales {
-	public static void numeroRealConSigno(String gramatica) {
-		gramatica += "<No. Real c/signo>";
+	public static void numeroRealConSigno(Gramatica gramatica) {
+		gramatica.agregarValorConClave("<No. Real c/signo>");
 
 		System.out.println("\n" + gramatica + "\n");
 
@@ -20,8 +20,8 @@ public class NumerosReales {
 		}
 	}
 
-	public static void numeroRealConSingoPositivo(String gramatica) {
-		gramatica += "\n            =>+<No. Real c/signo>";
+	public static void numeroRealConSingoPositivo(Gramatica gramatica) {
+		gramatica.agregarValorSinClave("<No. Real c/signo>");
 
 		System.out.println("\n" + gramatica + "\n");
 
@@ -62,21 +62,19 @@ public class NumerosReales {
 		// algun dia
 	}
 
-	public static void digitoPunto(String gramatica) {
-		gramatica += "\n            =>+<digito><punto>";
+	public static void digitoPunto(Gramatica gramatica) {
+		gramatica.agregarValorSinClave("<digito><punto>");
 
 		System.out.println("\n" + gramatica + "\n");
 
 		System.out.print("Ingresa un digito: ");
-		gramatica += "\n            =>+" + Leer.datoInt() + ".<decimales>";
+		gramatica.agregarValorSinClave(Leer.datoInt() + ".<decimales>");
 
 		System.out.println("\n" + gramatica + "\n");
-
-		gramatica += "\n            =>+" + Leer.datoInt() + ".<digito>";
 	}
 
 	public static void main(String [] args) {
-		String gramatica = "<No. Real>::=>";
+		Gramatica gramatica = new Gramatica("<No. Real>");
 
 		System.out.println("\n" + gramatica + "\n");
 
