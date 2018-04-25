@@ -10,7 +10,7 @@ public class NumerosReales {
 
 		switch (opcion) {
 		case 1:
-			resultado = "+" + resultado;
+			resultado += "\n+<N. Real c/signo>";
 			System.out.println("< N. Real c/signo>: \n1. +<N. Real s/signo> \n2. -< N. Real s/signo >");
 			break;
 		case 2:
