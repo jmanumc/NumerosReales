@@ -16,7 +16,7 @@ public class NumerosReales {
 			numeroRealConSingoNegativo();
 			break;
 		default:
-			System.out.println("La opcion elegida es incorrecta :(");
+			opcionPorDefecto();
 		}
 	}
 
@@ -37,7 +37,7 @@ public class NumerosReales {
 			digitoPunto(gramatica);
 			break;
 		default:
-			System.out.println("La opcion elegida es incorrecta :(");
+			opcionPorDefecto();
 		}
 	}
 
@@ -73,6 +73,10 @@ public class NumerosReales {
 		System.out.println("\n" + gramatica + "\n");
 	}
 
+    public static void opcionPorDefecto() {
+        System.out.println("La opcion elegida es incorrecta :(");
+    }
+
 	public static void main(String [] args) {
 		Gramatica gramatica = new Gramatica("<No. Real>");
 
@@ -90,7 +94,7 @@ public class NumerosReales {
 			numeroRealSinSigno();
 			break;
 		default:
-			System.out.println("La opcion elegida es incorrecta :(");
+			opcionPorDefecto();
 		}
 	}
 }
