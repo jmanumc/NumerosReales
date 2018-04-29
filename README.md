@@ -1,5 +1,5 @@
 # Generador de Numeros Reales
-Programa de para generar números reales, a partir de la siguiente gramatica:
+Programa para generar números reales, a partir de la siguiente gramática:
 
 La gramática __G = (N, T, P, σ*)__, genera todos los números reales.
 
