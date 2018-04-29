@@ -1,3 +1,5 @@
+package app;
+
 /**
  * Ejemplo de un numero:
  *
@@ -34,11 +36,15 @@ public class Numero {
         this.conPunto = true;
     }
 
+    public String getSigno() {
+        return this.signo;
+    }
+
     public String getReales() {
         return this.reales;
     }
 
-    public void setReales(String obtenerReales) {
+    public void setReales(String reales) {
         this.reales = reales;
     }
 
@@ -60,10 +66,6 @@ public class Numero {
 
     public void setSigno(String signo) {
         this.signo = signo;
-    }
-
-    public String getSigno() {
-        return this.signo;
     }
 
     public void setConPunto(boolean conPunto) {
