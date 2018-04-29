@@ -1,3 +1,8 @@
+package cli;
+
+import app.Numero;
+import app.Gramatica;
+
 public class NumerosReales {
     public static String opcionNumeroConSigno(Gramatica gramatica, Numero numero) {
         String etiqueta = "<No. Real c/signo>";
