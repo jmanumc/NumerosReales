@@ -14,13 +14,12 @@ import java.awt.event.ActionListener;
 
 public class SignView extends PanelView {
 
-    public AppView app;
-    public SignController sign;
-
     public Button next;
+    public AppView appView;
     public TextArea output;
     public GridLayout layout;
     public CheckboxGroup group;
+    public SignController controller;
     public Checkbox without, positive, negative;
 
     public SignView() {
@@ -32,10 +31,10 @@ public class SignView extends PanelView {
         negative = new Checkbox("", group, false);
     }
 
-    public void dependencies(SignController sign, AppView app) {
-        this.sign = sign;
-        this.app = app;
-        output = app.output;
+    public void dependencies(SignController controller, AppView appView) {
+        this.controller = controller;
+        this.appView = appView;
+        output = appView.output;
     }
     
     @Override
@@ -51,25 +50,25 @@ public class SignView extends PanelView {
     public void listeners() {
         without.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
-                sign.without();
+                controller.without();
             }
         });
 
         positive.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
-                sign.positive();
+                controller.positive();
             }
         });
 
         negative.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
-                sign.negative();
+                controller.negative();
             }
         });
 
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                sign.next();
+                controller.next();
             }
         });
     }
