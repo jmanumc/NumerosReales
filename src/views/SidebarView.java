@@ -10,11 +10,11 @@ import controllers.SidebarController;
 public class SidebarView extends PanelView {
 
     public Button reset;
-    public RealView real;
-    public SignView sign;
     public TextArea output;
     public GridLayout layout;
-    public DecimalsView decimals;
+    public RealView realView;
+    public SignView signView;
+    public DecimalsView decimalsView;
     public SidebarController controller;
 
     public SidebarView() {
@@ -23,20 +23,20 @@ public class SidebarView extends PanelView {
     }
 
     public void dependencies(SidebarController controller, AppView appView,
-    SignView sign, RealView real, DecimalsView decimals) {
+    SignView signView, RealView realView, DecimalsView decimalsView) {
         this.controller = controller;
-        this.sign = sign;
-        this.real = real;
-        this.decimals = decimals;
+        this.signView = signView;
+        this.realView = realView;
+        this.decimalsView = decimalsView;
         output = appView.output;
     }
 
     @Override
     public void components() {
         setLayout(layout);
-        add(sign);
-        add(real);
-        add(decimals);
+        add(signView);
+        add(realView);
+        add(decimalsView);
     }
 
     @Override
