@@ -30,7 +30,7 @@ public class RealController extends Controller {
     @Override
     public void initialize() {
         view.next.setLabel("Agregar");
-        view.digit.setLabel("Digito");
+        view.digit.setLabel("Digito y vuelve a insertar");
         view.digitPoint.setLabel("Digito con punto");
     }
 
